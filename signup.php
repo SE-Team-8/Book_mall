@@ -5,7 +5,7 @@ include "/db.php";
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>회원가입 폼</title>
+    <title>회원가입</title>
 </head>
 <body>
 <form method="post" action="member_ok.php">
@@ -22,16 +22,16 @@ include "/db.php";
                 <td><input type="password" size="35" name="userpw" placeholder="비밀번호"></td>
             </tr>
             <tr>
+                <td>비밀번호 확인</td>
+                <td><input type="password" size="35" name="userpw2" placeholder="비밀번호 확인"></td>
+            </tr>
+            <tr>
                 <td>이름</td>
                 <td><input type="text" size="35" name="name" placeholder="이름"></td>
             </tr>
             <tr>
                 <td>주소</td>
                 <td><input type="text" size="35" name="adress" placeholder="주소"></td>
-            </tr>
-            <tr>
-                <td>성별</td>
-                <td>남<input type="radio" name="sex" value="남"> 여<input type="radio" name="sex" value="여"></td>
             </tr>
             <tr>
                 <td>이메일</td>
