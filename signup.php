@@ -9,7 +9,7 @@ include "/db.php";
 </head>
 <body>
 <form method="post" action="member_ok.php">
-    <h1>회원가입 폼</h1>
+    <h1>회원가입</h1>
     <fieldset>
         <legend>입력사항</legend>
         <table>
