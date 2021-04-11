@@ -1,6 +1,6 @@
 <?php
 header("Content-Type: text/html;charset=UTF-8");
-$conn = mysqli_connect("127.0.0.1","root","FLvguSbVkG6N","signup");
+$conn = mysqli_connect("127.0.0.1","root","FLvguSbVkG6N","SignUp");
 $data_stream = "'".$_GET['Id']."','".$_GET['Password']."','".$_GET['Name']."','".$_GET['PhoneNum']."','".$_GET['Email']."'";
 $query = "insert into user(`Id`, `Password`, `Name`, `PhoneNum`, `Email`) values (".$data_stream.")";
 $result = mysqli_query($conn, $query);
