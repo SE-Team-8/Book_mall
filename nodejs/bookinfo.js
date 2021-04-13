@@ -1,11 +1,11 @@
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
-var db_config = require(__dirname + '/nodejs/database.js');
+var db_config = require(__dirname + '/database.js');
 var conn = db_config.init();
 
 db_config.connect(conn);
-var sql = 'SELECT * FROM bookinfo WHERE isbn = ?';
+
 
 function templateHTML(isbn,name,author,publisher,price){
 	return `
@@ -40,10 +40,16 @@ var app = http.createServer(function(request,response){
 	var _url = new URL(request.url, 'http://localhost:3000/bookinfo');
 	var __url = request.url;
 	var isbn = _url.searchParams.get("id");
-	conn.query(sql, isbn, function(err, rows, field) {
+	var sql = `SELECT * FROM bookinfo WHERE isbn = ${isbn}`;
+	conn.query(sql, function(err, rows, field) {
 		if(err) console.log('query error \n' + err);
 		else {
-			var template=templateHTML(isbn, rows.name, rows.author, rows,publisher, rows.price);
+			var template=templateHTML(isbn, rows.name, rows.author, rows.publisher, rows.price);
+			console.log(isbn);
+			console.log(rows.name);
+			console.log(rows.author);
+			console.log(rows.publisher);
+			console.log(rows.price);
 			response.writeHead(200);
 			response.end(template);
 		}
