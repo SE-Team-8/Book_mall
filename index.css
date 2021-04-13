@@ -13,15 +13,16 @@
 }
 
 .one {
-  border-width: 3px;
-  border-color: red;
-  border-style: solid;
-  grid-column-start: 1;
-  grid-column-end: 7;
+ 	border-width: 3px;
+  	border-color: red;
+  	border-style: solid;
+	grid-column-start: 1;
+	grid-column-end: 7;
+	text-align:center;
 }
 
-.one img {
-  width: 800px;
+.one embed {
+  	width: 800px;
 	height: 200px;
 }
 
@@ -66,7 +67,9 @@
   border-style: solid;
   grid-column-start: 1;
   grid-column-end: 7;
+	text-align:center;
 }
+
 
 
 

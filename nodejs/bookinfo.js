@@ -14,17 +14,17 @@ function templateHTML(isbn,name,author,publisher,price){
 			<head>
 				<meta charset="UTF-8">
 				<title>Book_mall</title>
-				<link rel="stylesheet" href="../main.css">
+				<link rel="stylesheet" href="../index.css">
 			</head>
 			<body>
 				<div class="wrapper">
 					<div class="one"><embed src="header.html"></div>
 					<div class="three">
-						<img src="../bookImage/${isbn}.png" alt="isbn book img">
-						<h2>${name}</h2>
-						<span>${author}</span>
-						<span>${publisher}</span>
-						<span>${price}</span>
+						<img style="text-align:left" src="../bookImage/${isbn}.png" alt="isbn book img">
+						<h2>책 이름: ${name}</h2>
+						<span>저자: ${author}</span>
+						<span>출판사: ${publisher}</span>
+						<span>가격: ${price}원</span>
 				
 					</div>
 				</div>
@@ -51,7 +51,7 @@ var app = http.createServer(function(request,response){
 			console.log(rows[0].publisher);
 			console.log(rows[0].price);
 			response.writeHead(200);
-			response.end(template);s
+			response.end(template);
 		}
 	});
 	console.log(__url);
