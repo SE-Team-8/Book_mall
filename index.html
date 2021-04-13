@@ -4,59 +4,105 @@
 		<meta charset="UTF-8">
 		<title>Book_mall</title>
 		<link href="index.css" rel="stylesheet" type="text/css">
+		<script src="script.js"></script>
 	</head>
 	<body>
-		<script src="index.js"></script>
-		<header>
-			<center>
-				<embed src="header.html">
-			</center>
-		</header>
-		<div role="main" class="grid">
-			<!-- 이곳에 배너을 넣으면? -->
-			<article class="column_left">
-				<p>8팀</p>
-      			<p>박현수</p>
-      			<p>박환용</p>
-      			<p>이병창</p>
-      			<p>전영주</p>
-				<p>
-					공지, 배너
-				</p>
-			</article>
-			<!-- 로그인 폼 -->
-			<article class="column_right">
-				<div class="login">
-				  
-					<form id="frmlogin" name="formlogin" autocomplete="off" method="POST" action="">
-
-						<div>
-							<input type="text" id="id" name="id" placeholder="아이디" maxlength="40" class="item_login" >
+		<div class="wrapper">
+			<div class="one">
+				<img src="logo1.jpg">
+			</div>
+			
+			<div class="two">
+      			<nav>
+        			<ol>
+          				<li><a href="#">AAAAAAA</a></li>
+          				<li><a href="#">BBBBBBB</a></li>
+          				<li><a href="#">CCCCCCC</a></li>
+          				<li><a href="#">DDDDDDD</a></li>
+          				<li><a href="#">EEEEEEE</a></li>
+          				<li><a href="#">FFFFFFF</a></li>
+					</ol>
+				</nav>
+			</div>
+			
+			<div class="three">
+				<div id="wrapper">
+					<div>
+						<div id="slider">
+							<ul>
+								<li id="content"></li>
+      							<li><img src="photos/sea-turtle.jpg" width="700" height="300" alt="Sea turtle" /></li>
+      							<li><img src="photos/coral-reef.jpg" width="700" height="300" alt="Coral Reef" /></li>
+      							<li><img src="photos/blue-fish.jpg" width="700" height="300" alt="Blue Fish" /></li>
+							</ul>
 						</div>
-						<div>
-					  
-						</div>
-						<div>
-							<input type="password" id="password" name="password" placeholder="비밀번호" maxlength="40" class="item_login">
-						</div>
-						<div>
-					  
-						</div>
-						<button id="loginBtn" type="submit" class="item_login">
-							로그인
-						</button>
-						<div>
-							<a href="signup.html">회원가입</a>
-						</div>
-					</form>
+					</div>
+					<ul id="pagination" class="pagination">
+						<li onclick="slideshow.pos(0)">1</li>
+      					<li onclick="slideshow.pos(1)">2</li>
+      					<li onclick="slideshow.pos(2)">3</li>
+      					<li onclick="slideshow.pos(3)">4</li>
+					</ul>
 				</div>
-			</article>
+				<script>
+					var slideshow=new TINY.slider.slide('slideshow',{
+    					id:'slider',
+    					auto:3,
+    					resume:true,
+    					vertical:false,
+						navid:'pagination',
+    					activeclass:'current',
+    					position:0
+    					});
+				</script>
+			</div>
+			
+			<div class="four">
+				<section>
+					<div id="article">
+						<h2>책 리스트</h2>
+						<article>
+							<p>AAAAAAA</p>
+							<ul>
+								<li>AAAAAAAAAAA</li>
+                				<li>BBBBBBBBBBB</li>
+                				<li>CCCCCCCCCCC</li>
+                				<li>DDDDDDDDDDD</li>
+							</ul>
+						</article>
+					</div>
+				</section>
+			</div>
+			
+			<div class="five">
+				<article class="column_right">
+					<div class="login">
+						<form id="frmlogin" name="formlogin" autocomplete="off" method="POST" action="">
+							<div>
+								<input type="text" id="id" name="id" placeholder="아이디" maxlength="40" class="item_login">
+							</div>
+							<div>
+							</div>
+							<div>
+              					<input type="password" id="password" name="password" placeholder="비밀번호" maxlength="40" class="item_login">
+            				</div>
+            				<div>
+								
+          					</div>
+							<button id="loginBtn" type="submit" class="item_login">
+             					로그인
+            				</button>
+            				<div>
+              					<a href="signup.html">회원가입</a>
+            				</div>
+						</form>
+					</div>
+				</article>
+			</div>
+			
+			<div class="six">
+			
+			</div>
 		</div>
-		
-		<footer>
-			<center>
-				<embed src="footer.html" >
-			</center>
-		</footer>
 	</body>
 </html>
