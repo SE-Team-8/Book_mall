@@ -70,11 +70,11 @@
 	text-align:center;
 }
 
-
+.p {line-height:1.4; margin-bottom:12px}
 
 
 body {font:12px Verdana,Arial; color:#555; background:#222 url(images/bg.jpg) 50% 0 no-repeat}
-p {line-height:1.4; margin-bottom:12px}
+
 #wrapper {width:700px; margin:50px auto}
 
 #slider {float:left; position:relative; overflow:auto; width:700px; height:300px; border:2px solid #fff; background:#fff}
