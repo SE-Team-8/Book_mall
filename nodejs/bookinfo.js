@@ -14,13 +14,13 @@ function templateHTML(isbn,name,author,publisher,price){
 			<head>
 				<meta charset="UTF-8">
 				<title>Book_mall</title>
-				<link rel="stylesheet" href="main.css">
+				<link rel="stylesheet" href="../main.css">
 			</head>
 			<body>
 				<div class="wrapper">
 					<div class="one"><embed src="header.html"></div>
 					<div class="three">
-						<img src="bookImage/${isbn}.jpg" alt="isbn book img">
+						<img src="../bookImage/${isbn}.png" alt="isbn book img">
 						<h2>${name}</h2>
 						<span>${author}</span>
 						<span>${publisher}</span>
@@ -44,14 +44,14 @@ var app = http.createServer(function(request,response){
 	conn.query(sql, function(err, rows, field) {
 		if(err) console.log('query error \n' + err);
 		else {
-			var template=templateHTML(isbn, rows.name, rows.author, rows.publisher, rows.price);
+			var template=templateHTML(isbn, rows[0].name, rows[0].author, rows[0].publisher, rows[0].price);
 			console.log(isbn);
-			console.log(rows.name);
-			console.log(rows.author);
-			console.log(rows.publisher);
-			console.log(rows.price);
+			console.log(rows[0].name);
+			console.log(rows[0].author);
+			console.log(rows[0].publisher);
+			console.log(rows[0].price);
 			response.writeHead(200);
-			response.end(template);
+			response.end(template);s
 		}
 	});
 	console.log(__url);
