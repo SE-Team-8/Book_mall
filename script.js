@@ -41,3 +41,4 @@ TINY.slider=function(){
 	};
 	return{slide:slide}
 }();
+
