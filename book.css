@@ -1,0 +1,41 @@
+.wrapper {
+    display: grid;
+
+    /* grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px; */
+}
+.one {
+ 	border-width: 3px;
+  	border-color: red;
+  	border-style: solid;
+	grid-column-start: 1;
+	grid-column-end: 7;
+	text-align:center;
+}
+
+.one embed {
+  	width: 800px;
+	height: 200px;
+}
+.three {
+  border-width: 3px;
+  border-color: red;
+  border-style: solid;
+  grid-column-start: 2;
+  grid-column-end: 6;
+}
+.six {
+  border-width: 3px;
+  border-color: red;
+  border-style: solid;
+  grid-column-start: 1;
+  grid-column-end: 7;
+	text-align:center;
+}
+
+img .book {
+	width: 180px;
+	height: 180px;
+	float:left;
+}
+body {font:12px Verdana,Arial; color:#555; background:#222 url(images/bg.jpg) 50% 0 no-repeat}
